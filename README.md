@@ -1,131 +1,133 @@
+# 🚗 Vehicle-to-Vehicle (V2V) Communication System using ESP32
 
-# 🚗 Vehicle-to-Vehicle (V2V) Communication System with Emergency Priority and Hazard Memory
+---
 
 ## 📌 Project Overview
 
-This project focuses on the design and development of a **Vehicle-to-Vehicle (V2V) communication system** aimed at improving road safety through real-time cooperative communication between vehicles.
+This project focuses on the design and development of a **Vehicle-to-Vehicle (V2V) communication system** aimed at improving road safety through real-time data exchange between vehicles.
 
-The system enables vehicles to share critical information such as collision risk, sudden braking events, accident detection, and emergency vehicle alerts using low-latency wireless communication.
+The system enables one vehicle (Vehicle A) to collect environmental data such as **distance and tilt** and transmit it wirelessly to another vehicle (Vehicle B), where it is visualized through a **live web dashboard**.
 
-The proposed solution demonstrates how **low-cost embedded systems** can be used to implement advanced automotive safety concepts.
+The proposed solution demonstrates how **low-cost embedded systems** can be used to implement basic automotive safety concepts.
 
-> ⚠️ **Project Status:** This project is currently under development as part of academic evaluation and ongoing implementation.
+> ⚠️ **Project Status:** This project is developed as an academic prototype for demonstration purposes.
 
 ---
 
 ## 🎯 Objectives
 
-- Develop real-time communication between vehicles.
-- Provide collision warning using distance sensing.
-- Detect sudden braking and accident conditions.
-- Implement emergency vehicle priority mode.
-- Introduce hazard memory for cooperative awareness.
-- Demonstrate low-latency wireless communication using ESP32.
+- Develop real-time communication between vehicles  
+- Provide collision warning using distance sensing  
+- Detect abnormal tilt (accident indication)  
+- Transmit data wirelessly between vehicles  
+- Display vehicle data on a live dashboard  
+- Demonstrate a centralized monitoring system  
 
 ---
 
 ## 🚨 Problem Statement
 
-Road accidents frequently occur due to delayed driver reaction, lack of awareness about nearby vehicles, and absence of communication between vehicles.
+Road accidents frequently occur due to delayed driver reaction and lack of awareness about nearby vehicles.
 
-Emergency vehicles such as ambulances also face delays in traffic because other drivers are not aware of their presence.
+Vehicles currently operate independently without communication, which limits the ability to warn drivers about potential hazards.
 
-Existing advanced vehicle safety systems are expensive and mostly available only in high-end vehicles.
+Advanced safety systems exist but are:
+- Expensive  
+- Limited to high-end vehicles  
 
-This project aims to develop a **low-cost prototype** that demonstrates cooperative vehicle safety using embedded technology.
+This project aims to demonstrate a **low-cost V2V prototype** that improves awareness using embedded systems and wireless communication.
 
 ---
 
 ## ⚙️ System Features
 
-- ✅ Collision Warning
-- ✅ Sudden Brake Alert
-- ✅ Speed Synchronization
-- ✅ Accident Detection
-- ✅ Emergency Vehicle Priority Mode
-- ✅ Hazard Memory Mechanism
-- ✅ Wireless Communication (ESP-NOW)
+- ✅ Distance Monitoring (Ultrasonic Sensor)  
+- ✅ Tilt Detection (MPU6050)  
+- ✅ Wireless Data Transmission (ESP32)  
+- ✅ Real-time Web Dashboard Visualization  
+- ✅ Vehicle Status Indication (Safe / Warning / Collision)  
+- ✅ Simulated Location Tracking  
 
 ---
 
 ## 🛠 Hardware Components
 
-- ESP32 Development Board
-- Ultrasonic Sensor (HC-SR04)
-- MPU6050 Accelerometer & Gyroscope
-- Push Button (Emergency Mode)
-- Buzzer and LEDs
-- Motor Driver Module
-- DC Motors with Chassis
-- Battery / Power Supply
-- Connecting Wires and Breadboard
+- ESP32 Development Board (2 Units)  
+- Ultrasonic Sensors (HC-SR04)  
+- MPU6050 (Accelerometer & Gyroscope)  
+- Motor Driver Module (for chassis setup)  
+- DC Motors with Chassis  
+- Battery / Power Supply  
+- Breadboard and Connecting Wires  
 
 ---
 
 ## 💻 Software Tools
 
-- Arduino IDE / PlatformIO
-- Embedded C / C++
-- ESP-NOW Communication Protocol
-- Serial Monitor for Debugging
+- Arduino IDE  
+- Embedded C / C++  
+- ESP-NOW / Wi-Fi Communication  
+- HTML, CSS, JavaScript (Web Dashboard)  
 
 ---
 
 ## 🧩 System Architecture
 
-Each vehicle acts as an independent embedded node equipped with sensors and wireless communication capability.
+Each vehicle acts as an independent embedded node:
 
-The ESP32 processes sensor data and transmits safety-related information to nearby vehicles using peer-to-peer communication.
+### 🚘 Vehicle A (Transmitter)
+- Collects sensor data (distance, tilt)  
+- Processes data using ESP32  
+- Transmits data wirelessly  
 
-Receiving vehicles generate alerts to improve driver awareness and response time.
-
-(Block diagram available in the Hardware folder.)
+### 🚘 Vehicle B (Receiver)
+- Receives transmitted data  
+- Processes incoming data  
+- Displays data on web dashboard  
 
 ---
 
 ## 🔄 Methodology
 
-1. Sensors continuously monitor vehicle conditions such as distance and acceleration.
-2. ESP32 processes the sensor data in real time.
-3. Hazard events such as braking, collision risk, or accidents are detected.
-4. Data packets are transmitted wirelessly to nearby vehicles.
-5. Receiving vehicles analyze data and generate alerts.
-6. Hazard memory stores events temporarily for cooperative awareness.
-7. Emergency mode can be activated manually using a push button.
+1. Sensors monitor distance and tilt conditions  
+2. ESP32 processes sensor data in real time  
+3. Data is transmitted wirelessly to the receiving vehicle  
+4. The receiving ESP32 processes incoming data  
+5. Dashboard updates and displays vehicle status  
+6. Alerts are generated based on detected conditions  
 
 ---
 
 ## 🚀 Applications
 
-- Intelligent Transportation Systems (ITS)
-- Connected Vehicles
-- Automotive Safety Systems
-- Emergency Response Systems
-- Smart Cities
+- Smart Vehicle Monitoring Systems  
+- Collision Warning Systems  
+- IoT-based Transportation Solutions  
+- Educational Embedded Systems Projects  
 
 ---
 
 ## 🔮 Future Scope
 
-- Integration with GPS and cloud platforms
-- Automotive-grade communication (CAN / V2X)
-- Multi-vehicle network expansion
-- Smart traffic signal integration
-- AI-based collision prediction
+- Integration with GPS for real-time tracking  
+- Multi-vehicle communication system  
+- Mobile application for monitoring  
+- Cloud-based data logging  
+- Autonomous vehicle integration  
 
 ---
 
 ## 👨‍💻 Team Members
 
 - B NANDIVARDHAN REDDY(2300049094)  
-- R. GAYATRI(2300049060)  
-- ARUMILLI GOVARSHITHA(2300049132) 
+- R. GAYATRI(2300049060)
+- ARUMILLI GOVARSHITHA(2300049132)
 
 ---
 
 ## 📌 Note
 
-This repository contains project documentation, design resources, and implementation code related to the ongoing development of the V2V communication prototype.
+This repository contains project documentation and implementation related to the V2V communication prototype developed for academic purposes.
 
 ---
 
@@ -135,6 +137,4 @@ This project is developed for academic and educational purposes.
 
 ---
 
-⭐ If you find this project interesting, feel free to explore and contribute!
-
-
+⭐ If you find this project interesting, feel free to explore!
